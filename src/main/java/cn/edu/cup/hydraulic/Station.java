@@ -5,6 +5,5 @@ public class Station extends HydraulicUnit {
     public Station(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.Station);
-        setModel(s);
     }
 }

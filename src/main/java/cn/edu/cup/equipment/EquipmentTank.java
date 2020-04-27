@@ -7,6 +7,5 @@ public class EquipmentTank extends HydraulicUnit {
     public EquipmentTank(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.Tank);
-        setName(getHydraulicUnitType().toString());
     }
 }

@@ -7,6 +7,5 @@ public class EquipmentIdealPump extends HydraulicUnit {
     public EquipmentIdealPump(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.IdealPump);
-        setName(getHydraulicUnitType().toString());
     }
 }

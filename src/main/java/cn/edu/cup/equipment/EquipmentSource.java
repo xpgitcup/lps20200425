@@ -7,7 +7,6 @@ public class EquipmentSource extends HydraulicUnit {
     public EquipmentSource(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.Source);
-        setName(getHydraulicUnitType().toString());
     }
 
     @Override

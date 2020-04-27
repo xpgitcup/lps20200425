@@ -28,6 +28,8 @@ public class LpsMain {
 
         System.out.println("获取：\"" + pipeline.getModel() + "\"数据.");
 
+        pipeline.display();
+
         System.out.println("计算完成.");
         
 //        pipeline.setModel("格拉线副本");

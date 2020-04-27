@@ -7,6 +7,5 @@ public class EquipmentCutOffValve extends HydraulicUnit {
     public EquipmentCutOffValve(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.CutOffValve);
-        setName(getHydraulicUnitType().toString());
     }
 }

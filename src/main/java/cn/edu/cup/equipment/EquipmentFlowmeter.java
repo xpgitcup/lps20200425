@@ -7,6 +7,5 @@ public class EquipmentFlowmeter extends HydraulicUnit {
     public EquipmentFlowmeter(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.Flowmeter);
-        setName(getHydraulicUnitType().toString());
     }
 }

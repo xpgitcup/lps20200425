@@ -7,6 +7,5 @@ public class EquipmentSafetyValve extends HydraulicUnit {
     public EquipmentSafetyValve(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.SafetyValve);
-        setName(getHydraulicUnitType().toString());
     }
 }

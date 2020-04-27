@@ -7,6 +7,5 @@ public class EquipmentCustomValve extends HydraulicUnit {
     public EquipmentCustomValve(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.CustomValve);
-        setName(getHydraulicUnitType().toString());
     }
 }
