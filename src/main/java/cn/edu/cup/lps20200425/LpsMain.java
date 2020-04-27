@@ -30,10 +30,10 @@ public class LpsMain {
 
         System.out.println("计算完成.");
         
-        pipeline.setModel("格拉线副本");
-        pipeline.exportToFile();
-
-        System.out.println("复制：\"" + pipeline.getModel() + "\"数据 ok.");
+//        pipeline.setModel("格拉线副本");
+//        pipeline.exportToFile();
+//
+//        System.out.println("复制：\"" + pipeline.getModel() + "\"数据 ok.");
         
     }
 }

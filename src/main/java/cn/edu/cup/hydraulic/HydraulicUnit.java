@@ -14,9 +14,9 @@ public class HydraulicUnit extends CustomObject {
 
     public HydraulicUnit(String s) {
         super();
-        hydraulicUnitType = HydraulicUnitType.Undefined;
-        setModel(s);
+        setHydraulicUnitType(HydraulicUnitType.Undefined);
         hydralicChildren = new ArrayList<>();
+        setModel(s);
     }
 
     public void updateChildren() {
@@ -118,6 +118,15 @@ public class HydraulicUnit extends CustomObject {
 
         return hydraulicUnit;
     }
+
+    @Override
+    public void exportToFile() {
+        super.exportToFile(); //To change body of generated methods, choose Tools | Templates.
+        getHydralicChildren().forEach((e) -> {
+            e.exportToFile();
+        });
+    }
+
 
     @Override
     public String getDataFileName() {

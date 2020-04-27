@@ -17,7 +17,7 @@ public class Pipeline extends HydraulicUnit {
     public Pipeline(String s) {
         super(s);
         setHydraulicUnitType(HydraulicUnitType.Pipeline);
-        setName(getHydraulicUnitType().toString());
+        setModel(s);
     }
 
     @Override
