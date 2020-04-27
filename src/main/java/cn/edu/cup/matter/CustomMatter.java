@@ -25,4 +25,8 @@ public class CustomMatter extends CustomObject {
     protected void setMatterType(MatterType matterType) {
         this.matterType = matterType;
     }
+
+    public void display() {
+        System.out.println(this.toString());
+    }
 }

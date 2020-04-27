@@ -61,12 +61,12 @@ public class HydraulicUnit extends CustomObject {
         super.importFromFile();
         // 处理子节点
         String[] children = getChildren();
-        if ((children != null) && (children.length > 1)) {
+        if ((children != null) && (children.length > 0)) {
             processChildren(children);
         }
         // 处理包含项
         String[] content = getContent();
-        if ((content != null) && (content.length > 1)) {
+        if ((content != null) && (content.length > 0)) {
             processContent(content);
         }
     }
@@ -192,11 +192,17 @@ public class HydraulicUnit extends CustomObject {
         getHydralicChildren().forEach((e) -> {
             e.exportToFile();
         });
+        getHydralicContent().forEach((e)->{
+            e.exportToFile();
+        });
     }
 
     public void display() {
         System.out.println(this.toString());
         getHydralicChildren().forEach((e) -> {
+            e.display();
+        });
+        getHydralicContent().forEach((e)->{
             e.display();
         });
     }

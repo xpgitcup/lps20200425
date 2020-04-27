@@ -17,7 +17,7 @@ public class LpsMain {
         System.out.println("液体管道模拟，2020 04 25.");
         
         String dataPath = "e:/temp/test20200419B";
-        String name = "秦京线aa";
+        String name = "秦京线20200427";
 
         // 创建
         Pipeline pipeline = new Pipeline(name);

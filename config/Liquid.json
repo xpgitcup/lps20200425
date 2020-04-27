@@ -1,0 +1,7 @@
+{
+	"heatCapacity":"热容",
+	"viscosity":"粘度",
+	"density":"密度",
+	"compressionCoefficient":"压缩系数",
+	"saturatedVaporPressure":"饱和蒸汽压"
+}
