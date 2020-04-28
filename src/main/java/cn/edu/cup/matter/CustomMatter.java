@@ -1,6 +1,7 @@
 package cn.edu.cup.matter;
 
 import cn.edu.cup.commondata.CustomObject;
+import org.apache.commons.math3.analysis.polynomials.PolynomialFunction;
 
 
 public class CustomMatter extends CustomObject {
@@ -29,4 +30,5 @@ public class CustomMatter extends CustomObject {
     public void display() {
         System.out.println(this.toString());
     }
+
 }

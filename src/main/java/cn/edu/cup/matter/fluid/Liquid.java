@@ -2,6 +2,7 @@ package cn.edu.cup.matter.fluid;
 
 import cn.edu.cup.matter.CustomMatter;
 import cn.edu.cup.matter.MatterType;
+import cn.edu.cup.physics.CommonConst;
 
 public class Liquid extends CustomMatter {
 
@@ -16,6 +17,8 @@ public class Liquid extends CustomMatter {
     public Liquid(String s) {
         super(s);
         setMatterType(MatterType.Liquid);
+        pressure = CommonConst.STANDARD_PRESSURE;
+        temperature = CommonConst.STANDARD_TEMPERATURE;
     }
 
     @Override
@@ -28,6 +31,9 @@ public class Liquid extends CustomMatter {
         getRawData().newVector("热容", "j/(kg.k)", 1852);
     }
 
+    /*
+     * 状态参数
+     * */
     public double getPressure() {
         return pressure;
     }
@@ -44,40 +50,43 @@ public class Liquid extends CustomMatter {
         this.temperature = temperature;
     }
 
-    public double[] getDensity() {
-        return density;
+    /*
+     * 物性参数的计算
+     * */
+    public double getDensity() {
+        return getPropertyPolies().get("density").value(temperature);
     }
 
     public void setDensity(double[] density) {
         this.density = density;
     }
 
-    public double[] getViscosity() {
-        return viscosity;
+    public double getViscosity() {
+        return getPropertyPolies().get("viscosity").value(temperature);
     }
 
     public void setViscosity(double[] viscosity) {
         this.viscosity = viscosity;
     }
 
-    public double[] getCompressionCoefficient() {
-        return compressionCoefficient;
+    public double getCompressionCoefficient() {
+        return getPropertyPolies().get("compressionCoefficient").value(temperature);
     }
 
     public void setCompressionCoefficient(double[] compressionCoefficient) {
         this.compressionCoefficient = compressionCoefficient;
     }
 
-    public double[] getSaturatedVaporPressure() {
-        return saturatedVaporPressure;
+    public double getSaturatedVaporPressure() {
+        return getPropertyPolies().get("saturatedVaporPressure").value(temperature);
     }
 
     public void setSaturatedVaporPressure(double[] saturatedVaporPressure) {
         this.saturatedVaporPressure = saturatedVaporPressure;
     }
 
-    public double[] getHeatCapacity() {
-        return heatCapacity;
+    public double getHeatCapacity() {
+        return getPropertyPolies().get("heatCapacity").value(temperature);
     }
 
     public void setHeatCapacity(double[] heatCapacity) {
