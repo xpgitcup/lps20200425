@@ -6,6 +6,7 @@
 package cn.edu.cup.lps20200425;
 
 import cn.edu.cup.hydraulic.Pipeline;
+import cn.edu.cup.matter.fluid.Liquid;
 
 /**
  *
@@ -31,7 +32,17 @@ public class LpsMain {
         pipeline.display();
 
         System.out.println("计算完成.");
-        
+
+        Liquid liquid = new Liquid("一种油");
+        liquid.setDataPath(dataPath);
+        liquid.importFromFile();
+
+        System.out.printf("密度 %.4f\n", liquid.getDensity());
+        System.out.printf("粘度 %.4f\n", liquid.getViscosity());
+        System.out.printf("压缩系数 %.4f\n", liquid.getCompressionCoefficient());
+        System.out.printf("饱和蒸汽压 %.4f\n", liquid.getSaturatedVaporPressure());
+        System.out.printf("热容 %.4f\n", liquid.getHeatCapacity());
+
 //        pipeline.setModel("格拉线副本");
 //        pipeline.exportToFile();
 //
