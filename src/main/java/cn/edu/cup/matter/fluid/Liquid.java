@@ -24,11 +24,11 @@ public class Liquid extends CustomMatter {
     @Override
     protected void setupRawData() {
         super.setupRawData();
-        getRawData().newVector("密度", "kg/m3", 1000.0);
-        getRawData().newVector("粘度", "Pa.s", 1e-3);
-        getRawData().newVector("压缩系数", "MPa", 1e-3);
-        getRawData().newVector("饱和蒸汽压", "MPa", 0.004);
-        getRawData().newVector("热容", "j/(kg.k)", 1852);
+        getRawData().newVector("密度", "kg/m3", new double[]{1000.0});
+        getRawData().newVector("粘度", "Pa.s", new double[]{1e-3});
+        getRawData().newVector("压缩系数", "MPa", new double[]{1e-3});
+        getRawData().newVector("饱和蒸汽压", "MPa", new double[]{0.004});
+        getRawData().newVector("热容", "j/(kg.k)", new double[]{1852});
     }
 
     /*
