@@ -6,6 +6,7 @@
 package cn.edu.cup.lps20200425;
 
 import cn.edu.cup.hydraulic.Pipeline;
+import cn.edu.cup.matter.fluid.Gas;
 import cn.edu.cup.matter.fluid.Liquid;
 
 /**
@@ -24,8 +25,8 @@ public class LpsMain {
         Pipeline pipeline = new Pipeline(name);
         pipeline.setDataPath(dataPath);
         pipeline.importFromFile();
-        pipeline.autoCreatePipe();
-        pipeline.fillSampleData(11);
+//        pipeline.autoCreatePipe();
+//        pipeline.fillSampleData(11);
 
         System.out.println("获取：\"" + pipeline.getModel() + "\"数据.");
 
@@ -37,11 +38,22 @@ public class LpsMain {
         liquid.setDataPath(dataPath);
         liquid.importFromFile();
 
+        System.out.println("下面是液体计算：");
+        liquid.setTemperature(122.0);
         System.out.printf("密度 %.4f\n", liquid.getDensity());
         System.out.printf("粘度 %.4f\n", liquid.getViscosity());
         System.out.printf("压缩系数 %.4f\n", liquid.getCompressionCoefficient());
         System.out.printf("饱和蒸汽压 %.4f\n", liquid.getSaturatedVaporPressure());
         System.out.printf("热容 %.4f\n", liquid.getHeatCapacity());
+
+        Gas gas = new Gas("一种气体");
+        gas.setDataPath(dataPath);
+        gas.importFromFile();
+
+        System.out.println("下面是气体计算：");
+        System.out.printf("密度 %.4f\n", gas.getDensity());
+        System.out.printf("粘度 %.4f\n", gas.getViscosity());
+        System.out.printf("热容 %.4f\n", gas.getHeatCapacity());
 
 //        pipeline.setModel("格拉线副本");
 //        pipeline.exportToFile();
